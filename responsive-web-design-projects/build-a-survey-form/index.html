@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>My survey form</title>
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
-	<script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script>
+	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
 	<!-- 
 
@@ -22,19 +22,25 @@
 		  <p id="description">Let us know how we can improve freeCodeCamp</p>
 		  <form id="survey-form">
 			  <div class="container">
-				  <div class="column1">* Name:</div>
+				  <div class="column1">
+					  <label id="name-label">* Name:</label>
+				  </div>
 				  <div class="column2">
 					  <input id="name" placeholder="Enter your name" type="text" required>
 				  </div>
 			  </div>
 			  <div class="container">
-				  <div class="column1">* Email:</div>
+				  <div class="column1">
+					  <label id="email-label">* Email:</label>
+				  </div>
 				  <div class="column2">
 					  <input id="email" placeholder="Enter your email" type="email" required>
 				  </div>
 			  </div>
 			  <div class="container">
-				  <div class="column1">* Age:</div>
+				  <div class="column1">
+					  <label id="number-label">* Age:</label>
+				  </div>
 				  <div class="column2">
 					  <input id="number" placeholder="Age" type="number" min="1" max="125" required>
 				  </div>
@@ -42,7 +48,7 @@
 			  <div class="container">
 				  <div class="column1">Which option best describes your current role?</div>
 				  <div class="column2">
-					  <select >
+					  <select id="dropdown">
 						  <option value="" disabled selected>Select an option</option>
 						  <option value="student">Student</option>
 						  <option value="fullTimeJob">Full Time Job</option>
@@ -53,22 +59,70 @@
 				  </div>
 			  </div>
 			  <div class="container">
-				  <div class="column1"></div>
-				  <div class="column2"></div>
+				  <div class="column1">
+					  <label>Which option best describes your current role?</label>
+				  </div>
+				  <div class="column2">
+					  <fieldset>
+						  <input type="radio" name="recommend" id="yes" value="yes">
+						  <label for="yes">Definitely</label><br>
+						  <input type="radio" name="recommend" id="maybe" value="maybe">
+						  <label for="maybe">Maybe</label><br>
+						  <input type="radio" name="recommend" id="unsure" value="unsure">
+						  <label for="unsure">Not sure</label><br>
+					  </fieldset>
+				  </div>
 			  </div>
 			  <div class="container">
-				  <div class="column1"></div>
-				  <div class="column2"></div>
+					<div class="column1">What do you like most in FCC:</div>
+					<div class="column2">
+						<select id="dropdown">
+							<option value="" disabled selected>Select an option</option>
+							<option value="Challenges">Challenges</option>
+							<option value="Projects">Projects</option>
+							<option value="Community">Community</option>
+							<option value="Open-Source">Open Source</option>
+						</select>
+					</div>
 			  </div>
 			  <div class="container">
-				  <div class="column1"></div>
-				  <div class="column2"></div>
+				  <div class="column1">
+					  <label>Things that should be improved in the future<br>(Check all that apply):</label>
+				  </div>
+				  <div class="column2">
+					  <fieldset>
+						  <input type="checkbox" name="to-improve" id="front-end-projects" value="front-end-projects">
+						  <label for="front-end-projects">Front-end Projects</label><br>
+						  <input type="checkbox" name="to-improve" id="back-end-projects" value="back-end-projects">
+						  <label for="back-end-projects">Back-end Projects</label><br>
+						  <input type="checkbox" name="to-improve" id="data-visualization" value="data-visualization">
+						  <label for="data-visualization">Data Visualization</label><br>
+						  <input type="checkbox" name="to-improve" id="challenges" value="challenges">
+						  <label for="challenges">Challenges</label><br>
+						  <input type="checkbox" name="to-improve" id="open-source-community" value="open-source-community">
+						  <label for="open-source-community">Open Source Community</label><br>
+						  <input type="checkbox" name="to-improve" id="gitter-help-rooms" value="gitter-help-rooms">
+						  <label for="gitter-help-rooms">Gitter help rooms</label><br>
+						  <input type="checkbox" name="to-improve" id="videos" value="videos">
+						  <label for="videos">Videos</label><br>
+						  <input type="checkbox" name="to-improve" id="city-meetups" value="city-meetups">
+						  <label for="city-meetups">City Meetups</label><br>
+						  <input type="checkbox" name="to-improve" id="wiki" value="wiki">
+						  <label for="wiki">Wiki</label><br>
+						  <input type="checkbox" name="to-improve" id="forum" value="forum">
+						  <label for="forum">Forum</label><br>
+						  <input type="checkbox" name="to-improve" id="additional-courses" value="additional-courses">
+						  <label for="additional-courses">Additional Courses</label><br>
+					  </fieldset>
+				  </div>
 			  </div>
 			  <div class="container">
-				  <div class="column1"></div>
-				  <div class="column2"></div>
+				  <div class="column1">Any Comments or Suggestions?</div>
+				  <div class="column2">
+					  <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea>
+				  </div>
 			  </div>
-			  <button type="submit">Submit</button>
+			  <button id="submit" type="submit">Submit</button>
 		  </form>
 	  </div>
   </body>
