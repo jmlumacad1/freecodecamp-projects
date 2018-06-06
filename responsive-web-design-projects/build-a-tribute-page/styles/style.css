@@ -1,11 +1,32 @@
 main {
     background-color: #EEEEEE;
-    margin: auto;
-    width: 50%;
+    border-radius: 5px;
+    text-align: center;
+    font-family: "Trebuchet MS", Verdana, Geneva, Tahoma, sans-serif;
+    color: #333333;
+    padding: 1px 0px;
+    margin: 25px 0px;
 }
 
 img {
     max-width: 100%;
     display: block;
     height: auto;
+    margin: auto;
+}
+
+#img-div {
+    background-color: #FFFFFF;
+    margin: 10px;
+    padding: 5px;
+}
+
+#tribute-info {
+    text-align: left;
+    width: 50%;
+    margin: auto;
+}
+
+#img-caption {
+    padding-bottom: 20px;
 }
