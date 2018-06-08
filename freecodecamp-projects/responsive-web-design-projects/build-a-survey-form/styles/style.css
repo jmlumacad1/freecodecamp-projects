@@ -13,3 +13,22 @@ h1 {
 #description {
     text-align: center;
 }
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.column1 {
+    text-align: right;
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .column1 {
+        text-align: left;
+    }
+}
